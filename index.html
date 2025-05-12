@@ -1,132 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TTCLOUD</title>
+  <title>天天云导航页</title>
   <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #111;
+      --link-color: #1a73e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #f9fafb;
-      color: #111;
-    }
-
-    header {
-      background: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    }
-
-    header .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 24px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header nav a.button {
-      background: #111;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      color: #111;
-    }
-
-    .card.main {
-      background: linear-gradient(135deg, #6A85B6, #bac8e0);
-      color: white;
-      font-size: 1.25rem;
-      font-weight: bold;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p.description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link {
+      display: block;
+      padding: 14px 20px;
       text-align: center;
-      padding: 40px;
+      text-decoration: none;
+      color: var(--link-color);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      transition: background 0.2s ease;
+    }
+
+    .link:hover {
+      background: #f0f0f0;
     }
 
     footer {
-      text-align: center;
-      padding: 32px;
-      font-size: 0.9rem;
+      margin-top: auto;
+      font-size: 0.8rem;
       color: #aaa;
-    }
-
-    a {
-      color: #6A85B6;
-      text-decoration: none;
-    }
-
-    .label {
-      font-weight: 600;
-      margin-bottom: 8px;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div><strong>TTCLOUD</strong></div>
-      <nav>
-        <a href="#" class="button">Get Started</a>
-      </nav>
-    </div>
-  </header>
+  <h1></h1>
+  <p class="description">天天云导航</p>
 
-  <main class="grid">
-    <div class="card main">
-      <div>⌘ + D</div>
-      <div style="margin-top: 8px;">ttc发布页</div>
-    </div>
-
-    <div class="card">
-      <div class="label">线路一</div>
-      <a href="https://x1.tttizi.com/">点我</a>
-    </div>
-
-    <div class="card">
-      <div class="label">线路二</div>
-      <a href="https://web.ttc03.site/">点我</a>
-    </div>
-    
-    <div class="card">
-      <div class="label">线路三</div>
-      <a href="https://x2.huangwei.xn--6qq986b3xl/#/login">点我</a>
-    </div>    
-
-    <div class="card">
-      <div class="label">新手教程</div>
-      <a href="https://xinshoucun.net/">点我</a><br /><br />
-    </div>
-
-    <div class="card">
-      <div class="label">Telegram群组</div>
-      <a href="https://t.me/ttcloudxyz">点我</a><br />
-    </div>
-  </main>
+  <div class="links">
+    <a class="link" href="https://x1.tttizi.com/" target="_blank">线路一</a>
+    <a class="link" href="https://web.ttc03.site/" target="_blank">线路二</a>
+    <a class="link" href="https://x2.huangwei.xn--6qq986b3xl/#/login" target="_blank">线路三</a>
+    <a class="link" href="https://xinshoucun.net/" target="_blank">新手教程</a>
+    <a class="link" href="https://t.me/ttcloudxyz">telegram通知群组</a>
+    <a class="link" href="https://news.ttcloud.site/">telegram通知群组网页版</a>
+  </div>
 
   <footer>
-    © 2023–2025 TTCLOUD All Rights Reserved
+    © 2025 天天云
   </footer>
 </body>
 </html>
