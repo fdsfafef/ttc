@@ -88,5 +88,19 @@
   <footer>
     © 2025 天天云
   </footer>
+
+  <script>
+    // Create the Analytics element
+    const analytics = document.createElement('vercel-analytics');
+
+    // Append it to the body (or any other suitable element)
+    document.body.appendChild(analytics);
+  </script>
+
+  <script type="module">
+    import { inject } from 'https://unpkg.com/@vercel/analytics@latest/dist/browser.js';
+    inject();
+  </script>
 </body>
 </html>
+
